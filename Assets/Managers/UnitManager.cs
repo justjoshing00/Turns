@@ -13,14 +13,7 @@ public class UnitManager
 
     public void CreateUnits()
     {
-        mech = new("mech");
-        soldier = new("soldier");
-        drone = new("drone");
-
-        units.Add(mech);
-        units.Add(soldier);
-        units.Add(drone);
-
+        units = new() { new("mech"), new("soldier"), new("drone") };
     }
 
     public List<Unit> GetUnits()

@@ -14,8 +14,17 @@ public class UnitSelector
     }
     public void NextUnit()
     {
+        //TODO wraparaound
+        if (index >= TurnManagerLocator.GetManager().CurrentPlayer.Units.Count - 1)
+        {
+            return;
+        }
         index += 1;
         CurrentUnit = TurnManagerLocator.GetManager().CurrentPlayer.Units[index];
+
+
+
+
     }
 
     public void SetUnit(Unit unit)

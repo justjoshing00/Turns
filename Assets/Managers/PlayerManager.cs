@@ -4,25 +4,20 @@ using UnityEngine;
 
 public class PlayerManager
 {
-    Player player1;
-    Player player2;
-    Player Neutral;
-
+    
     List<Player> players = new();
 
     public void CreatePlayers()
     {
-        player1 = new();
-        player2 = new();
-        Neutral = new();
+        players = new() {new(), new(), new()};
 
-        players.Add(player1);
-        players.Add(player2);
-        players.Add(Neutral);
+        foreach (Player player in players)
+        {
+            player.GetUnitsFromManager();
+        }
+        
 
-        players[0].GetUnitsFromManager();
-        players[1].GetUnitsFromManager();
-        players[2].GetUnitsFromManager();
+       
 
     }
 

@@ -20,6 +20,11 @@ public class TurnManager
 
     void NextTurn()
     {
+        //TODO wraparound
+        if (index >= players.Count - 1)
+        {
+            return;
+        }
         index += 1;
         CurrentPlayer = players[index];
     }
